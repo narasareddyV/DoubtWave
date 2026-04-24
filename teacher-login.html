@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>SilentDesk – Teacher Login</title> 
+  <link rel="stylesheet" href="style.css"/> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+San
+s:wght@300;400;500&display=swap" rel="stylesheet"/> 
+</head> 
+<body class="page-login"> 
+  <div class="bg-grid"></div> 
+  <div class="login-wrap"> 
+    <a href="index.html" class="back-link">← Back</a> 
+    <div class="login-card"> 
+      <div class="login-badge teacher-badge">
+󰳓
+ Teacher</div> 
+      <h2>Teacher Login</h2> 
+      <p class="login-desc">Sign in with your teacher credentials to manage class sessions and 
+doubts.</p> 
+  
+      <input type="text" id="teacherUser" class="input-field" placeholder="Username" 
+autocomplete="off"/> 
+      <input type="password" id="teacherPass" class="input-field" placeholder="Password"/> 
+      <div class="error-msg" id="loginError"></div> 
+      <button class="btn-primary" onclick="teacherLogin()">Login</button> 
+  
+      <div class="register-link"> 
+        New teacher? <a href="teacher-register.html">Create account</a> 
+      </div> 
+    </div> 
+  </div> 
+  <script src="script.js"></script> 
+</body> 
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>SilentDesk – Student Login</title> 
+  <link rel="stylesheet" href="style.css"/> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+San
+s:wght@300;400;500&display=swap" rel="stylesheet"/> 
+</head> 
+<body class="page-login"> 
+  <div class="bg-grid"></div> 
+  <div class="login-wrap"> 
+    <a href="index.html" class="back-link">← Back</a> 
+    <div class="login-card"> 
+      <div class="login-badge student-badge">
+🎓
+ Student</div> 
+      <h2>Welcome, Student</h2> 
+      <p class="login-desc">Your identity is protected. A random anonymous ID will be assigned 
+to you automatically.</p> 
+  
+      <div class="anon-id-display" id="anonIdDisplay"> 
+        <span class="anon-id-label">Your Anonymous ID</span> 
+        <span class="anon-id-value" id="anonIdValue">Generating...</span> 
+        <span class="anon-id-note">This ID cannot be changed and contains no personal 
+info.</span> 
+      </div> 
+  
+      <button class="btn-primary" id="studentLoginBtn" onclick="studentLogin()">Enter as This 
+ID</button> 
+      <p class="login-hint">No password required. Your ID is auto-assigned.</p> 
+    </div> 
+  </div> 
+  <script src="script.js"></script> 
+</body> 
+</html>

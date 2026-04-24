@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>DoubtWave – Silent Doubt Collection</title> 
+  <link rel="stylesheet" href="style.css"/> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+San
+s:wght@300;400;500&display=swap" rel="stylesheet"/> 
+</head> 
+<body class="page-index"> 
+  <div class="bg-grid"></div> 
+  <div class="hero-wrap"> 
+    <div class="brand"> 
+      <span class="brand-icon">◈</span> 
+      <span class="brand-name">DoubtWave</span> 
+    </div> 
+    <h1 class="hero-title">Ask Without Fear.<br/><em>Learn Without Limits.</em></h1> 
+    <p class="hero-sub">A silent doubt collection system for B.Tech classrooms. Anonymous. 
+Respectful. Effective.</p> 
+    <div class="role-cards"> 
+      <button class="role-card" id="btnStudent" onclick="location.href='student-login.html'"> 
+        <div class="role-icon">
+🎓
+</div> 
+        <div class="role-label">I'm a Student</div> 
+        <div class="role-desc">Join a class anonymously and ask doubts safely.</div> 
+        <div class="role-arrow">→</div> 
+      </button> 
+      <button class="role-card teacher-card" id="btnTeacher" onclick="showTeacherGate()"> 
+        <div class="role-icon">
+󰳓
+</div> 
+        <div class="role-label">I'm a Teacher</div> 
+        <div class="role-desc">Manage sessions, view and clear student doubts.</div> 
+        <div class="role-arrow">→</div> 
+      </button> 
+    </div> 
+  </div> 
+  
+  <!-- Teacher Gate Modal --> 
+  <div class="modal-overlay" id="teacherGate"> 
+    <div class="modal-box"> 
+      <button class="modal-close" onclick="hideTeacherGate()">✕</button> 
+      <div class="modal-icon">
+🔐
+</div> 
+      <h2>Teacher Access</h2> 
+      <p class="modal-desc">Enter the teacher access password to continue.</p> 
+      <input type="password" id="gatePass" class="input-field" placeholder="Access password" /> 
+      <div class="error-msg" id="gateError"></div> 
+      <button class="btn-primary" onclick="checkGatePass()">Verify & Continue</button> 
+    </div> 
+  </div> 
+  
+  <script src="script.js"></script> 
+</body> 
+</html> 

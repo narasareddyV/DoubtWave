@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>SilentDesk – Select Class</title> 
+  <link rel="stylesheet" href="style.css"/> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+San
+s:wght@300;400;500&display=swap" rel="stylesheet"/> 
+</head> 
+<body class="page-class"> 
+  <div class="bg-grid"></div> 
+  <div class="topbar"> 
+    <div class="brand"><span class="brand-icon">◈</span> SilentDesk</div> 
+    <div class="topbar-right"> 
+      <span class="user-chip" id="userChip"></span> 
+      <button class="btn-ghost" onclick="logout()">Logout</button> 
+    </div> 
+  </div> 
+  
+  <div class="class-wrap"> 
+    <h2 class="section-title">Select Your Class</h2> 
+    <p class="section-desc" id="classDesc">Choose your branch, semester, and section to find 
+your subjects.</p> 
+  
+    <div class="selector-row"> 
+      <div class="selector-group"> 
+        <label>Branch</label> 
+        <select id="branchSelect" class="select-field" onchange="onBranchChange()"> 
+          <option value="">— Select Branch —</option> 
+          <option value="CSE">CSE – Computer Science</option> 
+          <option value="ECE">ECE – Electronics & Communication</option> 
+          <option value="EEE">EEE – Electrical & Electronics</option> 
+          <option value="MECH">MECH – Mechanical Engineering</option> 
+          <option value="CIVIL">CIVIL – Civil Engineering</option> 
+          <option value="IT">IT – Information Technology</option> 
+          <option value="AIDS">AIDS – AI & Data Science</option> 
+          <option value="AIML">AIML – AI & Machine Learning</option> 
+        </select> 
+      </div> 
+  
+      <div class="selector-group" id="semGroup" style="display:none"> 
+        <label>Semester</label> 
+        <select id="semSelect" class="select-field" onchange="onSemChange()"> 
+          <option value="">— Select Semester —</option> 
+          <option value="1">Semester 1</option> 
+          <option value="2">Semester 2</option> 
+          <option value="3">Semester 3</option> 
+          <option value="4">Semester 4</option> 
+          <option value="5">Semester 5</option> 
+          <option value="6">Semester 6</option> 
+          <option value="7">Semester 7</option> 
+          <option value="8">Semester 8</option> 
+        </select> 
+      </div> 
+  
+      <div class="selector-group" id="secGroup" style="display:none"> 
+        <label>Section</label> 
+        <select id="secSelect" class="select-field" onchange="onSectionChange()"> 
+          <option value="">— Select Section —</option> 
+          <option value="A">Section A</option> 
+          <option value="B">Section B</option> 
+          <option value="C">Section C</option> 
+          <option value="D">Section D</option> 
+        </select> 
+      </div> 
+    </div> 
+  
+    <div id="subjectArea" style="display:none"> 
+      <h3 class="subsection-title">Subjects <span id="subjectMeta"></span></h3> 
+      <div class="subject-grid" id="subjectGrid"></div> 
+    </div> 
+  </div> 
+  
+  <script src="script.js"></script> 
+</body> 
+</html> 

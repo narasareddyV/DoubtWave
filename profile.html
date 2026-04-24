@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>SilentDesk – Profile</title> 
+  <link rel="stylesheet" href="style.css"/> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+San
+s:wght@300;400;500&display=swap" rel="stylesheet"/> 
+</head> 
+<body class="page-login"> 
+  <div class="bg-grid"></div> 
+  <div class="login-wrap"> 
+    <a href="class.html" class="back-link">← Back to Classes</a> 
+    <div class="login-card"> 
+      <div class="login-badge teacher-badge">
+👤
+ Profile</div> 
+      <h2 id="profileUsername">Teacher Profile</h2> 
+      <p class="login-desc">Change your password below. You must enter your current password 
+to proceed.</p> 
+  
+      <input type="password" id="oldPass" class="input-field" placeholder="Current password"/> 
+      <input type="password" id="newPass" class="input-field" placeholder="New password"/> 
+      <input type="password" id="newPass2" class="input-field" placeholder="Confirm new 
+password"/> 
+      <div class="error-msg" id="profileError"></div> 
+      <div class="success-msg" id="profileSuccess"></div> 
+      <button class="btn-primary" onclick="changePassword()">Update Password</button> 
+      <p class="login-hint">⚠ If you forget your password, your account cannot be 
+recovered.</p> 
+    </div> 
+  </div> 
+  <script src="script.js"></script> 
+</body> 
+</html> 

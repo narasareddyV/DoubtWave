@@ -1,0 +1,88 @@
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+  <title>SilentDesk – Doubts Chat</title> 
+  <link rel="stylesheet" href="style.css"/> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+San
+s:wght@300;400;500&display=swap" rel="stylesheet"/> 
+</head> 
+<body class="page-chat"> 
+  <div class="bg-grid"></div> 
+  
+  <div class="chat-topbar"> 
+    <button class="btn-ghost back-btn" onclick="location.href='class.html'">← Back</button> 
+    <div class="chat-title-block"> 
+      <div class="chat-subject-name" id="chatSubjectName">Loading...</div> 
+      <div class="chat-meta" id="chatMeta"></div> 
+    </div> 
+    <div class="chat-topbar-right"> 
+      <span class="user-chip" id="userChip"></span> 
+      <!-- Clear Chat: teacher only --> 
+      <button class="btn-danger" id="clearChatBtn" onclick="confirmClearChat()" 
+style="display:none">
+🗑
+ Clear Chat</button> 
+      <button class="btn-ghost" onclick="logout()">Logout</button> 
+    </div> 
+  </div> 
+  
+  <div class="chat-container"> 
+    <div class="chat-messages" id="chatMessages"> 
+      <div class="chat-empty">No doubts yet. Be the first to ask!</div> 
+    </div> 
+  
+    <!-- Input: student only --> 
+    <div class="chat-input-bar" id="chatInputBar" style="display:none"> 
+      <div class="limit-bar"> 
+        <span id="limitInfo" class="limit-text"></span> 
+      </div> 
+      <div class="input-row"> 
+        <input type="text" id="msgInput" class="chat-input" placeholder="Type your doubt… (max 
+50 chars, no spaces)" 
+          maxlength="100" oninput="validateInput(this)" onkeydown="if(event.key==='Enter') 
+sendMessage()"/> 
+        <span class="char-count" id="charCount">0/50</span> 
+        <button class="btn-send" id="sendBtn" onclick="sendMessage()">Send</button> 
+      </div> 
+    </div> 
+  </div> 
+  
+  <!-- Edit Modal --> 
+  <div class="modal-overlay" id="editModal"> 
+    <div class="modal-box"> 
+      <button class="modal-close" onclick="closeEditModal()">✕</button> 
+      <h2>Edit Your Doubt</h2> 
+      <input type="text" id="editInput" class="input-field" maxlength="100" 
+oninput="validateInput(this)" placeholder="Edit your message…"/> 
+      <span class="char-count" id="editCharCount">0/50</span> 
+      <div class="error-msg" id="editError"></div> 
+      <button class="btn-primary" onclick="saveEdit()">Save Changes</button> 
+    </div> 
+  </div> 
+  
+  <!-- Clear confirm Modal --> 
+  <div class="modal-overlay" id="clearModal"> 
+    <div class="modal-box"> 
+      <button class="modal-close" 
+onclick="document.getElementById('clearModal').classList.remove('active')">✕</button> 
+      <div class="modal-icon">
+🗑
+</div> 
+      <h2>Clear All Chat?</h2> 
+      <p class="modal-desc">This will remove all doubts for this subject/section for all users. This 
+cannot be undone.</p> 
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:16px"> 
+        <button class="btn-ghost" 
+onclick="document.getElementById('clearModal').classList.remove('active')">Cancel</button> 
+        <button class="btn-danger" onclick="clearChat()">Yes, Clear</button> 
+      </div> 
+    </div> 
+  </div> 
+  
+  <script src="script.js"></script> 
+</body> 
+</html>
